@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NTU Sustainability | Bike hire</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       var settings = {
+           "url": "https://api.openweathermap.org/data/2.5/weather?q=Wroclaw, PL&units=metric&appid=959734beae266b4485d3b1bf8148a570",
+            "method": "GET",
+            "timeout": 0,
+             };
+
+                $.ajax(settings).done(function (response) {
+                console.log(response);
+
+                let contentTemp = response.main.temp;
+                $('#temp').append(contentTemp);
+
+                var contentHumid = response.main.humidity;
+                $('#humid').append(contentHumid);
+
+                var content = response.wind.speed;
+                $('#windSpeed').append(content);
+             });
+      </script>
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">NTU BIKE HIRE</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#faqs">faqs</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">maintenance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <h1 class="brand-heading text-warning ">NTU BIKE HIRE</h1>
+              <p class="intro-text text-left"">
+              bike hire for studets and staff <br>
+            all-year-round maintenance<br>
+             training and free maps<br>
+                </p>
+                 <div class="col-lg-4" style="float: right; color: #ffc107; border: 2px solid #ffffff; padding: 2em;background-color: rgba(0,0,0, 0.5) ;z-index: 100;">
+                <h4> Biking weather in Notts</h4>
+
+                  <p>temperature: <span id="temp"></span> degrees Celsius</p>
+                  <p>humidity: <span id="humid"></span> percent</p>
+                  <p>wind speed: <span id="windSpeed"></span></p>
+
+              </div>
+             
+
+              <a href="#faqs" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="faqs" class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+                       
+            <h2 class="text-warning">Bike hire FAQs</h2>
+         <h3> Who can hire a bike?</h3>
+<p>Any current NTU student or staff member. <br>Full-time, part time, undergraduate or postgraduate. <b>Everyone.</b></p>
+
+<h3>Do I need insurance?</h3>
+<p>It's up to you. Most bike insurance costs upwards of £30/year and charge an excess of up to £100 when you claim. As your deposit is much less than this, you may not think it worthwhile to insure your bike separately. However if you are able to add your bike to home contents insurance then it may not cost you any extra, and could save your deposit should the bike be stolen.</p>
+
+<h3>Where do I get my bike?</h3>
+<p>From the NTU BikeHub at the City Students' Union. If you're based at Clifton or Brackenhurst and you hire your bike during welcome week then we can bring your bike to your campus in the first few weeks of term.</p>
+
+<h3>I've not ridden a bike for years! Can I get some training?</h3>
+<p>Yes, and it's all free. We've partnered up with Ridewise, a local training provider, who can help you to be confident and safe on the road. Ask us when you collect your bike for more information.</p>
+
+
+<h3>How should I look after my hire bike?</h3>
+<p>You are responsible for the appropriate maintenance of your hire bike. You will lose some or all of your deposit if your bike is not returned in a suitable state. Help is at hand though, and you can always contact us or attend one of the free maintenance sessions that will be be advertised on our events page.</p>
+
+<h3>What happens if my hire bike gets stolen?</h3>
+<p>All our hire bikes are provided with good quality d-locks as apart of the package. If you use it sensibly and make the most of our secure cycle parking, then your bike is unlikely to be stolen. If it is, then as long as your inform us of the theft promptly with a police incident number then you will only lose your deposit.</p>
+
+<h3>How should I look after my hire bike?</h3>
+<p>You are responsible for the appropriate maintenance of your hire bike. You will lose some or all of your deposit if your bike is not returned in a suitable state. Help is at hand though, and you can always contact us or attend one of the free maintenance sessions that will be be advertised on our events page.</p>
+
+<h3>What happens if my hire bike gets stolen?</h3>
+<p>All our hire bikes are provided with good quality d-locks as apart of the package. If you use it sensibly and make the most of our secure cycle parking, then your bike is unlikely to be stolen. If it is, then as long as your inform us of the theft promptly with a police incident number then you will only lose your deposit.</p>
+
+
+
+
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section content-section">
+      <div class="container">
+        <div class="col-lg-8">
+          <h2 class="text-warning">MAINTENANCE</h2>
+                <p class="text-left">
+                        We offer
+                        Free advice and affordable maintenance support.<br>
+
+bike mechanic service (for Ucycle and personal bike repairs)<br>
+maintenance training sessions: all abilities welcome <br>
+safety advice.</p><br>
+                  <h3 class="text-warning"> BIKE HUB OPENING HOURS </h3>
+                    TERM TIME 
+
+                    <ul class="list-unstyled">
+                    <li><b> MONDAY :</b> 10 - 2pm </li>
+                    <li><b>WEDNESDAY:</b> 3 - 7pm </li>
+                        </ul>
+            
+<hr>
+<p>
+The BikeHub is open to all staff and students, who are welcome to make the most of our qualified mechanics.   
+</p>
+
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+          <div id="map">
+          </div>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1201.707026429633!2d-1.1556096926356187!3d52.95896554024916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c1814475ad55%3A0xb3f6180f502f3995!2sSandby+Hall!5e0!3m2!1sen!2suk!4v1519510519271" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; kulchickdesign.com 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYVpfc8hj3gu_E9q_UMKIJuG9gfn4NZLQ&callback=initMap"
+    async defer>
+      var gMapAPIkey = "AIzaSyCYVpfc8hj3gu_E9q_UMKIJuG9gfn4NZLQ";
+
+    // function initMap() {
+        
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       center: {lat: -34.397, lng: 150.644},
+    //       zoom: 8
+    //     });
+    //   }
+
+
+    </script>
+
+  </body>
+
+</html>
